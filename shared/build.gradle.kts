@@ -60,6 +60,13 @@ kotlin {
     }
 }
 
+sqldelight {
+    database("NoteDatabase") {
+        packageName = "ru.maybolz.noteskmm.database"
+        sourceFolders = listOf("sqldelight")
+    }
+}
+
 android {
     namespace = "ru.maybolz.noteskmm"
     compileSdk = 33
