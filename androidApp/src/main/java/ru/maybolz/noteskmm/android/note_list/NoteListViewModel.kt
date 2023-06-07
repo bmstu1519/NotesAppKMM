@@ -52,7 +52,7 @@ class NoteListViewModel @Inject constructor(
         }
     }
 
-    fun deletenoteById(id: Long){
+    fun deleteNoteById(id: Long){
         viewModelScope.launch {
             noteDataSource.deleteNoteById(id)
             loadNotes()
