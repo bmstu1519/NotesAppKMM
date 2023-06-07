@@ -4,7 +4,6 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
@@ -48,7 +47,7 @@ class NoteListViewModel @Inject constructor(
     fun onToggleSearch(){
         savedStateHandle["isSearchActive"] = !isSearchActive.value
         if (!isSearchActive.value){
-            savedStateHandle["isSearchActive"] = ""
+            savedStateHandle["searchText"] = ""
         }
     }
 
