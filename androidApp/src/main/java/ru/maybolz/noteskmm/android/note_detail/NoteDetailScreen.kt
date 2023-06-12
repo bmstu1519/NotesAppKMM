@@ -30,7 +30,7 @@ fun NoteDetailScreen(
 
     LaunchedEffect(key1 = hasNoteBeenSaved) {
         if(hasNoteBeenSaved) {
-//            navController.popBackStack()
+            navController.popBackStack()
         }
     }
 
