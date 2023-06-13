@@ -12,6 +12,11 @@
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		343AC93F2A3749F9000DC717 /* NoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343AC93E2A3749F9000DC717 /* NoteListViewModel.swift */; };
 		343AC9412A374A28000DC717 /* NoteListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343AC9402A374A28000DC717 /* NoteListScreen.swift */; };
+		343AC94A2A3757DB000DC717 /* HideableSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343AC9492A3757DB000DC717 /* HideableSearchTextField.swift */; };
+		343AC94C2A375CA2000DC717 /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343AC94B2A375CA2000DC717 /* NoteItem.swift */; };
+		343AC94E2A376061000DC717 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343AC94D2A376061000DC717 /* Colors.swift */; };
+		34B102C62A38D2A000C69454 /* NoteDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B102C52A38D2A000C69454 /* NoteDetailScreen.swift */; };
+		34B102C82A38DE4F00C69454 /* NoteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B102C72A38DE4F00C69454 /* NoteDetailViewModel.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +39,11 @@
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		343AC93E2A3749F9000DC717 /* NoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewModel.swift; sourceTree = "<group>"; };
 		343AC9402A374A28000DC717 /* NoteListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListScreen.swift; sourceTree = "<group>"; };
+		343AC9492A3757DB000DC717 /* HideableSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideableSearchTextField.swift; sourceTree = "<group>"; };
+		343AC94B2A375CA2000DC717 /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
+		343AC94D2A376061000DC717 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		34B102C52A38D2A000C69454 /* NoteDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailScreen.swift; sourceTree = "<group>"; };
+		34B102C72A38DE4F00C69454 /* NoteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewModel.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,8 +73,19 @@
 			children = (
 				343AC93E2A3749F9000DC717 /* NoteListViewModel.swift */,
 				343AC9402A374A28000DC717 /* NoteListScreen.swift */,
+				343AC9492A3757DB000DC717 /* HideableSearchTextField.swift */,
+				343AC94B2A375CA2000DC717 /* NoteItem.swift */,
 			);
 			path = note_list;
+			sourceTree = "<group>";
+		};
+		34B102C42A38D25E00C69454 /* note_detail */ = {
+			isa = PBXGroup;
+			children = (
+				34B102C52A38D2A000C69454 /* NoteDetailScreen.swift */,
+				34B102C72A38DE4F00C69454 /* NoteDetailViewModel.swift */,
+			);
+			path = note_detail;
 			sourceTree = "<group>";
 		};
 		7555FF72242A565900829871 = {
@@ -87,12 +108,14 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				34B102C42A38D25E00C69454 /* note_detail */,
 				343AC93D2A3749C9000DC717 /* note_list */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				343AC94D2A376061000DC717 /* Colors.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -196,10 +219,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343AC94C2A375CA2000DC717 /* NoteItem.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				34B102C62A38D2A000C69454 /* NoteDetailScreen.swift in Sources */,
 				343AC9412A374A28000DC717 /* NoteListScreen.swift in Sources */,
+				343AC94E2A376061000DC717 /* Colors.swift in Sources */,
+				34B102C82A38DE4F00C69454 /* NoteDetailViewModel.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				343AC93F2A3749F9000DC717 /* NoteListViewModel.swift in Sources */,
+				343AC94A2A3757DB000DC717 /* HideableSearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -312,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

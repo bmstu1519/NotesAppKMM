@@ -9,7 +9,6 @@
 import SwiftUI
 import shared
 
-
 struct NoteListScreen: View {
     private var noteDataSource: NoteDataSource
     @StateObject var viewModel = NoteListViewModel(noteDataSource: nil)
@@ -26,25 +25,30 @@ struct NoteListScreen: View {
             ZStack {
                 NavigationLink(
                     destination: NoteDetailScreen(
-                    noteDataSource: self.noteDataSource,
-                    noteId: selectedNoteId
+                        noteDataSource: self.noteDataSource,
+                        noteId: selectedNoteId
                     ), isActive: $isNoteSelected) {
                         EmptyView()
-                    }.hidden()
-                HideableSearchTextField<EmptyView>(
+                    }
+                    .navigationBarHidden(true)
+                
+                HideableSearchTextField<NoteDetailScreen>(
                     onSearchToggled: {
-                    viewModel.toggleIsSearchActive()
-                },
+                        viewModel.toggleIsSearchActive()
+                    },
                     destinationProvider: {
-                    EmptyView()
-                },
+                        NoteDetailScreen(
+                            noteDataSource: noteDataSource,
+                            noteId: selectedNoteId
+                        )
+                    },
                     isSearchActive: viewModel.isSearchActive,
                     searchText: $viewModel.searchText
                 )
                     .frame(maxWidth: .infinity, minHeight: 40)
                     .padding()
                 
-                if viewModel.isSearchActive {
+                if !viewModel.isSearchActive {
                     Text("All notes")
                         .font(.title2)
                 }
