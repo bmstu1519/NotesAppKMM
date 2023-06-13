@@ -10,7 +10,7 @@ import Foundation
 import shared
 
 extension NoteListScreen {
-    @MainActor class NoteListVIewModel: ObservableObject {
+    @MainActor class NoteListViewModel: ObservableObject {
         private var noteDataSource: NoteDataSource? = nil
         
         private let searchNotes = SearchNotes()
